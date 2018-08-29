@@ -1,0 +1,26 @@
+<?php  
+
+											if (isset($_POST['update'])) {
+												 
+											 
+											 	 
+												 
+											$sql= "UPDATE  continious_marks SET continious_total='$_POST[total]' WHERE student_id='$_POST[hidden]'"; 
+ 
+
+												mysqli_query($con,$sql);
+											}
+										
+
+										
+										?> 
+
+															<td><input  id="student_id" type="text" name="student_id" class="form-control" value="'.$rows['student_id'].'" required></td>
+															<td><input  id="course_code" type="text" name="course_code" class="form-control" value="'.$rows['course_code'].'" required></td>
+															<td><input  id="attendence" type="text" name="attendence" class="form-control" value="'.$rows['attendence'].'" required></td>
+															<td><input  id="class_test_1" type="text" name="class_test_1" class="form-control" value="'.$rows['class_test_1'].'" required></td>
+															<td><input  id="mid" type="text" name="mid" class="form-control" value="'.$rows['mid'].'" required></td>
+															<td><input  id="class_test_2" type="text" name="class_test_2" class="form-control" value="'.$rows['class_test_2'].'" required></td>
+															<td><input  id="assingment_presentation" type="text" name="assingment_presentation" value="'.$rows['assingment_presentation'].'" class="form-control" required></td>
+															<td><input  id="total" type="text" name="total" class="form-control" value="'.$total.'" required></td>
+															<td><input  id="submit" type="submit" name="update" value="update"   class="btn btn-success"></td>

@@ -1,0 +1,117 @@
+<?php include 'includes/db.php'  ?>
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title> Some Where in blog </title>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+		<script src="js/jquery.js"></script>
+		<script src="bootstrap/js/bootstrap.js"></script>
+		<link href="includes/css/styles.css" rel="stylesheet" >
+		<style type="text/css">
+			.my-fixed {
+				resize:none;
+			}
+
+		</style>
+</head>
+	<body>
+		<div class="row">
+																								
+																							
+																							
+        <?php include 'includes/header.php'; ?> 
+
+        <?php include 'includes/side.php';?>
+
+			<div class="container" style="background:green;">
+                    <div class="col-lg-9" id="post">
+                        <h1> Submit Form </h1>
+                        <form class="form-horizontal" method="post" enctype="multipart/form-data" action="form_process.php" role="form">
+
+							<div class="form-group">
+								<label for="name" class="control-label col-sm-2">Name *</label>
+									<div class="col-sm-5">
+										<input type="text" id="name" class="form-control" placeholder="Full Name" required>
+									</div>
+							</div>
+
+							<div class="form-group">
+								<label for="email" class="control-label col-sm-2">E-Mail *</label>
+									<div class="col-sm-5">
+										<input type="email" id="email" class="form-control" placeholder="Email Address" required>
+									
+									</div>
+							</div>
+							
+							
+								<div class="form-group">
+									<label for="subject" class="control-label col-sm-2">Subject *</label>
+										<div class="col-sm-5">
+											<input type="text" id="subject" class="form-control" placeholder=" Add Your Subject " required>
+										</div>	
+								</div>
+							
+									<div class="form-group">
+										<label for="gender" class="control-label col-sm-2">Select Your Gender *</label>
+											<div class="col-sm-3">
+												<select class="form-control" required>
+													<option value="">Your Gender
+													</option>
+													<option value="male">Male
+													</option>
+													<option value="Female">Female
+													</option>
+													</select>
+											</div>
+									</div>
+
+									<div class="form-group">
+										<label for="Country" class="control-label col-sm-2">Country *</label>
+											<div class="col-sm-3">
+												<select class="form-control" name="country" required>
+													<option value="">Your Country
+													</option>
+													<option value="bangladesh">Bangladesh
+													</option>
+													<option value="India">India
+													</option>
+													<option value="Srilanka">Srilanka
+													</option>
+													<option value="USA">USA
+													</option>
+												</select>
+
+											</div>
+									</div>
+									<div class="form-group">
+	                                    <label class="control-label col-sm-2 ">Skills</label>  
+		                                    <div class="col-sm-5">
+			                                    <label class="checkbox-inline"><input type="checkbox" name="skill1">HTML</label>
+			                                    <label class="checkbox-inline"><input type="checkbox" name="skill2">CSS</label>
+			                                    <label class="checkbox-inline"><input type="checkbox" name="skill3">PHPL</label>
+			                                    <label class="checkbox-inline"><input type="checkbox" name="skill3">C</label>
+			                                    <label class="checkbox-inline"><input type="checkbox" name="skill4">C#</label> 
+		                                    </div>
+                                        </div>
+							    <div class="form-group" >
+                                    <label for="comments"class="control-label col-sm-2">Comments* </label>
+	                                    <div class="col-sm-5">
+	                                    <textarea rows="8" name="comments"class="form-control my-fixed"> </textarea>
+	                                    </div>
+                                </div>
+                                <div class="form-group">
+                                	<label for="submit" class="control-label col-sm-2">Submit </label>
+                                	<div class="col-sm-5">
+                                	<input type="submit" name="submit_form" class="btn btn-default btn-block" id="submit" value="submit form">
+									</div>
+								</div>
+
+
+
+
+							</form>
+					</div>
+				</div>									
+							
+</body>
